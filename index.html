@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="loginApp" class="no-js"> 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Log In</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+
+  <div ng-view></div>
+
+  <div ng-controller = "mainController">
+       
+     <button ng-click="login()"  ng-hide="authData">login</button>
+     <button ng-click="logout()" ng-show="authData">logout</button>
+     <button ng-click="createLogin()" ng-hide="authData">create</button>
+  </div>
+
+ 
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.4/angularfire.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
